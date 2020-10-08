@@ -1,0 +1,79 @@
+<div fxlayout fxHide.lt-md>
+  <section fxLayout fxLayoutGap="50px">
+    <mat-card class="webCard">
+      <mat-card-title>Total Cases: </mat-card-title>
+      <mat-card-content>
+       <section style="font-size: 22px;margin: 5%; ">
+          {{totalCases | number}}
+       </section>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="webCard">
+      <mat-card-title>Total Active Cases: </mat-card-title>
+      <mat-card-content>
+       <section style="font-size: 22px;margin: 5%; color: orange;">
+          {{activeCases | number}}
+       </section>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="webCard">
+      <mat-card-title>Total Recovered : </mat-card-title>
+      <mat-card-content>
+        <section style="font-size: 22px;margin: 5%; color: green;">
+          {{totalRecovered |number }}
+        </section>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="webCard">
+      <mat-card-title>Total Deaths: </mat-card-title>
+      <mat-card-content>
+       <section style="font-size: 22px;margin: 5%; color: red;">
+          {{totalDeaths |number }}
+       </section>
+      </mat-card-content>
+    </mat-card>
+  </section>
+</div>
+
+<div fxHide.gt-md>
+  <section fxLayout='column' fxLayoutGap="50px">
+    <mat-card class="mobCard">
+      <mat-card-title>Total Cases: </mat-card-title>
+      <mat-card-content>
+       <section style="font-size: 20px;margin: 5%; ">
+          {{totalCases | number}}
+       </section>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="mobCard">
+      <mat-card-title>Total Active Cases: </mat-card-title>
+      <mat-card-content>
+       <section style="font-size: 20px;margin: 5%; color: orange;">
+          {{activeCases | number}}
+       </section>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="mobCard">
+      <mat-card-title>Total Recovered : </mat-card-title>
+      <mat-card-content>
+        <section style="font-size: 20px;margin: 5%; color: green;">
+          {{totalRecovered |number }}
+        </section>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="mobCard">
+      <mat-card-title>Total Deaths: </mat-card-title>
+      <mat-card-content>
+       <section style="font-size: 20px;margin: 5%; color: red;">
+          {{totalDeaths |number }}
+       </section>
+      </mat-card-content>
+    </mat-card>
+  </section>
+</div>
