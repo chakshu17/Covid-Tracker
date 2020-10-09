@@ -1,1 +1,16 @@
-<p>state-wise works!</p>
+<div fxHide.lt-md>
+  <h1>State Wise</h1>
+
+  <label for="c">Select Country</label><br />
+  <select
+    name=""
+    class="form-control"
+    id="c"
+    #input
+    (change)="updateValues(input.value)"
+  >
+    <option value="{{ con }}" *ngFor="let con of stateName">
+      {{ con }}
+    </option>
+  </select>
+</div>
