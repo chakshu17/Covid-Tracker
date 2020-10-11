@@ -9,31 +9,29 @@ import { Component, OnInit } from '@angular/core';
 export class StateWiseComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
-  apiData:any[];
-  stateName:string[] =[];
-  stateData:any=[]
+  apiData: any[] = [];
+  stateName: string[] = [];
+  toatlCases: number;
+  stateData: any = [];
   ngOnInit(): void {
     this.http
       .get('https://api.covidindiatracker.com/state_data.json')
       .subscribe((re) => {
-          console.log(re);
-        this.apiData===re;
-
-        // this.apiData.map(data=>{
-        //   // console.log(data);
-        //   this.stateName.push(data.state);
-        //   this.stateData=data;
-        // })
-
+        this.apiData.push(re);
       });
-      // console.log(this.stateName);
-        console.log(this.apiData);
 
+    this.apiData.map((data) => {
+      //console.log(data);
+      this.stateName.push(data.state);
+
+      this.toatlCases = data.confirmed;
+    });
+
+    // console.log(this.stateName);
+    console.log(this.apiData);
   }
 
-  updateValues(country:string){
-      console.log(country);
-
+  updateValues(country) {
+    console.log(country.target.value);
   }
-
 }
