@@ -1,18 +1,25 @@
-<mat-toolbar style="background-color: rgb(155, 152, 152); height: 55px">
+<mat-toolbar style="background-color: rgb(155, 152, 152); height: 100px">
   <div fxHide.gt-md>
     <button mat-icon-button style="color: black" (click)="onToggleSidenav()">
       <mat-icon>menu</mat-icon>
     </button>
   </div>
   &nbsp;&nbsp;
-  <div>
-    <a style="font-size: 22px" routerLink="/home">Covid-19 Tracker India </a>
+  <div style="margin-top: -35px;">
+    <a style="font-size: 28px;" routerLink="/home">Covid-19 Tracker India </a>
   </div>
-  <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.lt-md>
+
+  <div
+    fxFlex
+    fxLayout
+    fxLayoutAlign="flex-start"
+    style="margin-top: 40px; margin-left: -220px;"
+    fxHide.lt-md
+  >
     <ul fxLayout class="navigation-items" fxLayoutGap="18px">
-      <li><a routerLink="/home">Home </a></li>
+      <li ><a routerLink="/home">Home </a></li>
       <li class="lineheader">|</li>
-      <li><a routerLink="/state-wise"> State Wise</a></li>
+      <li  ><a routerLink="/state-wise"> State Wise</a></li>
       <!-- <li class="lineheader">|</li>
       <li><a routerLink="/our-projects"> About Developer</a></li> -->
     </ul>
